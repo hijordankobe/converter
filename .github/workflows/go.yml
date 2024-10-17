@@ -16,9 +16,10 @@ jobs:
 
       - name: Cross Compile
         run: |
+          cd ./bcc
           GOOS=linux GOARCH=amd64 go build -o converter_linux_amd64
       - name: Upload Cross Compile Artifacts
         uses: actions/upload-artifact@v4
         with:
           name: converter_linux_amd64
-          path: converter_linux_amd64
+          path: bcc/converter_linux_amd64
