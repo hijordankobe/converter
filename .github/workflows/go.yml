@@ -20,7 +20,7 @@ jobs:
           check-latest: true
 
       - name: Build
-        run: go build -v -o converter ./...  # 指定输出文件名为 converter
+        run: go build -v -o converter ./...
 
       - name: Test
         run: go test -run=Test
@@ -29,7 +29,7 @@ jobs:
         run: go test -bench=Benchmark -benchmem
 
       - name: Upload binary
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4  # 更新为 v4
         with:
-          name: converter  # 上传的工件名称
-          path: converter  # 要上传的文件名
+          name: converter
+          path: converter
