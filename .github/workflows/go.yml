@@ -16,7 +16,7 @@ jobs:
 
       - name: Cross Compile
         run: |
-          GOOS=linux GOARCH=amd64 go build -o allinone_linux_amd64
+          GOOS=linux GOARCH=amd64 go build -o converter_linux_amd64
       - name: Upload Cross Compile Artifacts
         uses: actions/upload-artifact@v4
         with:
